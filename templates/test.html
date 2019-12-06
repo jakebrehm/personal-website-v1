@@ -1,0 +1,73 @@
+{% extends "header.html" %}
+
+{% block head %}
+        <link href="{{ url_for('static', filename='css/test.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+<div class="about">
+
+        <h2 class="about-title parallax">
+                My name is <span style="color: #c77a00">Jacob Brehm</span>,<br>
+                although I usually go by Jake.
+        </h2>
+<!-- 
+        <div class="text-center center" style="padding-left: 3rem; padding-right: 3rem;">
+            <img class="about-photo" src="{{ url_for('static', filename='img/personal-photo.png') }}">
+        </div> -->
+
+        <div class="about-section">
+                <h2>I'll try to keep this short.</h2>
+    
+                <p>
+                    I'm 22 years old, and I'm originally from Hamburg, NY -- a suburb of Upstate New York's largest city, Buffalo.<br>
+                    This means that I basically have had no other choice but to develop a love for hot wings and snow.<br>
+                    In my free time, I enjoy programming, playing music, photography, filmmaking, and just being outdoors.
+                </p>
+        </div>
+
+        <div class="about-section">
+            <h2>I went to Clarkson University for college.</h2>
+
+            <p>
+                I started off as a physics major, which afforded me the opportunity to begin research that is now
+                <a href="https://aip.scitation.org/doi/10.1063/1.5086286">published</a>.<br>
+                I then added mechanical engineering on as a second major, and eventually dropped my physics major altogether.<br>
+                While there, I worked as a teaching assistant for both differential equations and climate change courses.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2>I have a lot of international experience.</h2>
+
+            <p>
+                I've studied abroad twice -- once in Sydney, Australia for a semester and then in Leicester, England for a year.<br>
+                On top of this, I've spent extended periods of time in Denmark and teaching English in France.<br>
+                In total, I've traveled to 21 countries and hope to continue to experience more of what the world has to offer.
+            </p>
+        </div>
+        
+        <div class="about-section">
+            <h2>Now, I work as a Development Engineer.</h2>
+
+            <p>
+                Equipped with a bachelor's degree in mechanical engineering, I currently work in Liverpool, NY.<br>
+                As a development engineer, I'm challenged with adding electrical knowledge to my mechanical background.<br>
+                In my day to day, I'm executing and automating tests as well as developing software.
+            </p>
+        </div>
+
+        <!-- <h2 class="about-title">
+                <span style="color: #c77a00">Thank you for reading!</span><br><br>
+                Feel free to <a href="#">view my resume</a> and contact me via the contact page or the social icons below.
+        </h2> -->
+
+        <h2 class="about-title">
+                <span style="color: #c77a00">Thank you for reading!</span><br><br>
+                Feel free to contact me via the social icons below.
+        </h2>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<!-- <html lang="en" {% if request.path == '/' %} style="width: 100vw"{% endif %}> -->
+    <head>
+        <meta charset="utf-8">
+        <title>Jake Brehm</title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+        {% block head %}{% endblock %}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+    </head>
+</html>
+
+<!-- <body {%- if request.path == '/' %} class="text-center home-bg"{% else %} class="text-center"{% endif %}> -->
+<!-- <body {%- if request.path == '/' %} class="text-center home-bg" style="width: 100vw"{% else %} class="text-center"{% endif %}></body> -->
+<body {%- if request.path == '/' %} class="text-center home-bg"{% else %} class="text-center"{% endif %}
+            {%- if request.path == '/' %} style="width: 100vw;"{% else %} style="width: 100%; padding-left: calc(100vw - 100%);"{% endif %}>
+
+    <div class="cover-container d-flex mx-auto h-100 flex-column">
+
+        <header class="masthead mb-auto" style="padding-top: 1rem;">
+            <div class="inner">
+            <!-- <h3 class="masthead-brand">Jake Brehm</h3> -->
+            <nav class="nav nav-masthead justify-content-center">
+                <a {%- if request.path == '/' %} class="nav-link active"{% else %} class="nav-link"{% endif %} href="/">Home</a>
+                <a {%- if request.path == '/about-me/' %} class="nav-link active"{% else %} class="nav-link"{% endif %} href="/about-me/">About Me</a>
+                <!-- <a {%- if request.path == '#' %} class="nav-link active"{% else %} class="nav-link"{% endif %} href="/">Projects</a> -->
+                <!-- <a {%- if request.path == '#' %} class="nav-link active"{% else %} class="nav-link"{% endif %} href="/">Travel</a> -->
+                <!-- <a {%- if request.path == '/contact/' %} class="nav-link active"{% else %} class="nav-link"{% endif %} href="/contact/">Contact</a> -->
+            </nav>
+            </div>
+        </header>
+
+        {% block body %}{% endblock %}
+
+        <footer class="mastfoot mt-auto" style="padding-bottom: 1rem;">
+            <div class="col-xs-8">
+                <a style="padding: 3px" href="https://www.facebook.com/jakembrehm"><i class="fab fa-facebook fa-2x"></i></a>
+                <a style="padding: 3px" href="https://www.instagram.com/brehmjake/"><i class="fab fa-instagram fa-2x"></i></a>
+                <a style="padding: 3px" href="https://twitter.com/jakebrehm"><i class="fab fa-twitter fa-2x"></i></a>
+                <a style="padding: 3px" href="https://www.linkedin.com/in/jacobbrehm/"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a style="padding: 3px" href="https://github.com/jakebrehm"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
